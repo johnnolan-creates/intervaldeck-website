@@ -233,7 +233,7 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <div class="footer-links">
-          <a href="#privacy-modal" data-modal="privacy">Privacy Policy</a>
+          <a href="privacy.html">Privacy Policy</a>
           <a href="#cookie-modal" data-modal="cookies">Cookie Policy</a>
         </div>
 
@@ -285,20 +285,6 @@
     </dialog>
 
     <script>
-      // Policy modal handler
-      const modal = document.getElementById("policy-modal");
-      const modalBody = document.getElementById("modal-body");
-      const policies = {
-        privacy: `
-        <h3>Privacy Policy</h3>
-        <p>IntervalDeck stores your custom interval playlists locally on your device. If you subscribe to our mailing list, your email address is used solely to send product updates and is never sold or shared with third parties.</p>
-      `,
-        cookies: `
-        <h3>Cookie Policy</h3>
-        <p>This static website does not use invasive tracking cookies. Essential local storage or basic analytics may be used to ensure reliable site delivery on GitHub Pages.</p>
-      `,
-      };
-
       // Auto-aligning seamless subject ticker
       const tickerTrack = document.getElementById("subject-ticker");
       if (tickerTrack && tickerTrack.children.length > 1) {
@@ -342,6 +328,16 @@
       modal.addEventListener("click", (e) => {
         if (e.target === modal) modal.close();
       });
+
+      const observer = new MutationObserver((mutations) => {
+        const recaptcha = document.querySelector(".g-recaptcha");
+        if (recaptcha && !recaptcha.hasAttribute("data-theme")) {
+          recaptcha.setAttribute("data-theme", "dark");
+          observer.disconnect();
+        }
+      });
+
+      observer.observe(document.body, { childList: true, subtree: true });
     </script>
   </body>
 </html>
