@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IntervalDeck — Flow Timers</title>
+  <meta name="description" content="Browse premade interval timers or build custom audio-guided playlists for workouts, box breathing, Pomodoro, and everyday tasks." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HERO HEADER -->
+  <header class="hero">
+    <div class="container">
+      <!-- App Brand Icon & Wordmark -->
+      <nav class="brand-nav">
+        <a href="#" class="brand-logo" aria-label="IntervalDeck Home">
+          <span><img class="brand-logo" src="images/play_store_512.png"></span>
+          <span class="brand-name">IntervalDeck</span>
+        </a>
+      </nav>
+
+      <!-- Split Hero Content -->
+      <div class="hero-grid">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            I need a <br />
+            <span class="ticker-wrapper" aria-live="polite">
+                <span class="ticker-track" id="subject-ticker">
+                    <span class="ticker-word">Pomodoro</span>
+                    <span class="ticker-word">Couch to 5K</span>
+                    <span class="ticker-word">Chess Blitz</span>
+                    <span class="ticker-word">Box Breathing</span>
+                    <span class="ticker-word">Boxing Round</span>
+                    <span class="ticker-word">Meditation</span>
+                    <span class="ticker-word">HIIT Workout</span>
+                    <span class="ticker-word">Stretching</span>
+                </span>
+            </span>
+            <br />timer.
+          </h1>
+          <p class="hero-subtitle">
+            Structured, audio-guided interval playlists for workouts, breathwork, focus sprints, and daily routines.
+          </p>
+        </div>
+
+        <div class="hero-media">
+          <!-- Samsung Phone Frame Encapsulating Player Screenshot -->
+          <div class="phone-frame">
+            <div class="phone-camera"></div>
+            <div class="phone-screen">
+              <img src="images/player.jpg" alt="IntervalDeck Box Breathing Player Screen" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Centered Google Play CTA -->
+      <div class="hero-cta-centered">
+        <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" class="play-badge" aria-label="Get it on Google Play">
+          <svg class="play-icon" viewBox="0 0 24 24" width="28" height="28">
+            <path fill="#4285F4" d="M3.61 1.814L13.793 12 3.61 22.186a1.99 1.99 0 0 1-.465-1.287V3.1c0-.51.182-.967.465-1.286z"/>
+            <path fill="#34A853" d="M17.204 8.589L13.793 12l3.411 3.411 3.844-2.188c.73-.416.73-1.464 0-1.88l-3.844-2.754z"/>
+            <path fill="#FBBC05" d="M3.61 22.186L13.793 12l3.411 3.411-12.14 6.91c-.542.309-1.132.238-1.454-.135z"/>
+            <path fill="#EA4335" d="M17.204 8.589L5.064 1.679c-.542-.309-1.132-.238-1.454.135L13.793 12l3.411-3.411z"/>
+          </svg>
+          <span class="play-text">
+            <span class="play-small">GET IT ON</span>
+            <span class="play-large">Google Play</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- FEATURES SECTION -->
+  <main class="features">
+    <div class="container">
+
+      <!-- FEATURE 1: Text Left, Explore Screenshot Right -->
+      <section class="feature-row">
+        <div class="feature-text">
+          <h2>Browse an ever-growing library of premade timers for everyday tasks</h2>
+          <p>
+            Jump straight in with curated playlists for Couch to 5K, Box Breathing, Boxing rounds, Pomodoro deep work, and mobility routines—ready in one tap.
+          </p>
+        </div>
+        <div class="feature-media">
+          <div class="phone-frame">
+            <div class="phone-camera"></div>
+            <div class="phone-screen">
+              <img src="images/explore.jpg" alt="IntervalDeck Explore Library Screen" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURE 2: Elevated Create Mockup Left, Text Right -->
+      <section class="feature-row feature-row--reverse">
+        <div class="feature-text">
+          <h2>Create your own playlists of interval timers</h2>
+          <p>
+            Stack custom work, rest, and transition intervals. Drag and drop any track to reorder your sequence effortlessly before hitting play.
+          </p>
+        </div>
+        <div class="feature-media">
+          <!-- Use the generated 3D elevated Create mockup image -->
+          <div class="elevated-mockup-wrapper">
+            <img src="images/playlists.jpg" alt="IntervalDeck Create Screen with lifted drag-and-drop interval track" class="elevated-mockup-img" />
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURE 3: Coming Soon Centered + Wear OS Text Left + Watch Mockup Right -->
+      <section class="feature-coming-soon">
+        <div class="coming-soon-header">
+          <span class="coming-soon-badge">COMING SOON</span>
+        </div>
+        <div class="feature-row">
+          <div class="feature-text">
+            <h2>Export your timers to your Wear OS smartwatch and play them.</h2>
+            <p>
+              Leave your phone in your locker. Sync custom playlists directly to your wrist with tactile haptic cues and glanceable progress rings.
+            </p>
+          </div>
+          <div class="feature-media">
+            <div class="watch-mockup-wrapper">
+              <img src="images/wearOS.webp" alt="Samsung Galaxy Watch running IntervalDeck mini player" class="watch-mockup-img" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- MAILING LIST SIGN UP FORM -->
+  <section class="newsletter" id="updates">
+    <div class="container">
+      <div class="newsletter-card">
+        <h2>Get notified when <br> Wear OS &amp; new timer packs drop</h2>
+        <p>No spam—just occasional release notes and new premade routine packs.</p>
+        <!-- Replace action URL with your Buttondown, Mailchimp, or Formspree endpoint -->
+        <form class="newsletter-form" action="https://formspree.io/f/your-form-id" method="POST">
+          <label for="email-input" class="sr-only">Email address</label>
+          <input
+            id="email-input"
+            type="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          />
+          <button type="submit" class="btn-primary">Join the List</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="#privacy-modal" data-modal="privacy">Privacy Policy</a>
+        <a href="#cookie-modal" data-modal="cookies">Cookie Policy</a>
+      </div>
+
+      <div class="footer-badge">
+        <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" class="play-badge play-badge--compact" aria-label="Get it on Google Play">
+          <svg class="play-icon" viewBox="0 0 24 24" width="22" height="22">
+            <path fill="#4285F4" d="M3.61 1.814L13.793 12 3.61 22.186a1.99 1.99 0 0 1-.465-1.287V3.1c0-.51.182-.967.465-1.286z"/>
+            <path fill="#34A853" d="M17.204 8.589L13.793 12l3.411 3.411 3.844-2.188c.73-.416.73-1.464 0-1.88l-3.844-2.754z"/>
+            <path fill="#FBBC05" d="M3.61 22.186L13.793 12l3.411 3.411-12.14 6.91c-.542.309-1.132.238-1.454-.135z"/>
+            <path fill="#EA4335" d="M17.204 8.589L5.064 1.679c-.542-.309-1.132-.238-1.454.135L13.793 12l3.411-3.411z"/>
+          </svg>
+          <span class="play-text">
+            <span class="play-small">GET IT ON</span>
+            <span class="play-large">Google Play</span>
+          </span>
+        </a>
+      </div>
+
+      <p class="copyright">&copy; 2026 John Nolan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Lightweight Policy Modal for GitHub Pages Single-Page Convenience -->
+  <dialog id="policy-modal" class="policy-modal">
+    <div class="modal-content">
+      <button type="button" class="modal-close" aria-label="Close modal">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </dialog>
+
+  <script>
+    // Policy modal handler
+    const modal = document.getElementById('policy-modal');
+    const modalBody = document.getElementById('modal-body');
+    const policies = {
+      privacy: `
+        <h3>Privacy Policy</h3>
+        <p>IntervalDeck stores your custom interval playlists locally on your device. If you subscribe to our mailing list, your email address is used solely to send product updates and is never sold or shared with third parties.</p>
+      `,
+      cookies: `
+        <h3>Cookie Policy</h3>
+        <p>This static website does not use invasive tracking cookies. Essential local storage or basic analytics may be used to ensure reliable site delivery on GitHub Pages.</p>
+      `
+    };
+
+    // Auto-aligning seamless subject ticker
+    const tickerTrack = document.getElementById('subject-ticker');
+    if (tickerTrack && tickerTrack.children.length > 1) {
+    // Automatically clone the first item for a seamless loop
+    const firstClone = tickerTrack.children[0].cloneNode(true);
+    firstClone.setAttribute('aria-hidden', 'true');
+    tickerTrack.appendChild(firstClone);
+
+    const totalItems = tickerTrack.children.length;
+    let index = 0;
+
+    setInterval(() => {
+        index++;
+        tickerTrack.style.transition = 'transform 0.55s cubic-bezier(0.65, 0, 0.35, 1)';
+        tickerTrack.style.transform = `translateY(-${index * 1.2}em)`;
+
+        // When reaching the cloned first item, snap back to 0 invisibly
+        if (index === totalItems - 1) {
+        setTimeout(() => {
+            tickerTrack.style.transition = 'none';
+            index = 0;
+            tickerTrack.style.transform = 'translateY(0)';
+        }, 560);
+        }
+    }, 2000);
+    }
+
+    document.querySelectorAll('[data-modal]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const key = link.getAttribute('data-modal');
+        modalBody.innerHTML = policies[key] || '';
+        modal.showModal();
+      });
+    });
+
+    document.querySelector('.modal-close').addEventListener('click', () => modal.close());
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) modal.close();
+    });
+  </script>
+</body>
+</html>
