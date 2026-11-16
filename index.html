@@ -234,7 +234,7 @@
       <div class="container footer-inner">
         <div class="footer-links">
           <a href="privacy.html">Privacy Policy</a>
-          <a href="#cookie-modal" data-modal="cookies">Cookie Policy</a>
+          <a href="terms.html">Terms of Service</a>
         </div>
 
         <div class="footer-badge">
@@ -274,15 +274,6 @@
       </div>
     </footer>
 
-    <!-- Lightweight Policy Modal for GitHub Pages Single-Page Convenience -->
-    <dialog id="policy-modal" class="policy-modal">
-      <div class="modal-content">
-        <button type="button" class="modal-close" aria-label="Close modal">
-          &times;
-        </button>
-        <div id="modal-body"></div>
-      </div>
-    </dialog>
 
     <script>
       // Auto-aligning seamless subject ticker
@@ -312,32 +303,6 @@
           }
         }, 2000);
       }
-
-      document.querySelectorAll("[data-modal]").forEach((link) => {
-        link.addEventListener("click", (e) => {
-          e.preventDefault();
-          const key = link.getAttribute("data-modal");
-          modalBody.innerHTML = policies[key] || "";
-          modal.showModal();
-        });
-      });
-
-      document
-        .querySelector(".modal-close")
-        .addEventListener("click", () => modal.close());
-      modal.addEventListener("click", (e) => {
-        if (e.target === modal) modal.close();
-      });
-
-      const observer = new MutationObserver((mutations) => {
-        const recaptcha = document.querySelector(".g-recaptcha");
-        if (recaptcha && !recaptcha.hasAttribute("data-theme")) {
-          recaptcha.setAttribute("data-theme", "dark");
-          observer.disconnect();
-        }
-      });
-
-      observer.observe(document.body, { childList: true, subtree: true });
     </script>
   </body>
 </html>
